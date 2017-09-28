@@ -9,7 +9,7 @@ namespace Cities.Infrastructure.TagHelpers
     [HtmlTargetElement("td", Attributes = "wrap")]
     public class TableCellTagHelper:TagHelper
     {
-        public string Wrap { get; set; }=string.Empty;
+        public bool Wrap { get; set; }
         public override void Process(TagHelperContext context,TagHelperOutput output)
         {
             output.PreContent.SetHtmlContent("<b><i>");
