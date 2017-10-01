@@ -1,21 +1,18 @@
 ﻿@model City
 @{ Layout = "_Layout"; }
-<form method="post">
+<form method="post" action="/Home/Create">
+<div class="form-group">
+    <label for="Name">Name:</label>
+    <input class="form-control" name="Name" />
+</div>
+<div class="form-group">
+    <label for="Country">Country:</label>
+    <input class="form-control" name="Country" />
+</div>
     <div class="form-group">
-        <label helper-for="Name" />
-        <input helper-for="Name" />
+        <label for="Population">Population:</label>
+        <input class="form-control" name="Population" />
     </div>
-    <div class="form-group">
-        <label helper-for="Country" />
-        <input helper-for="Country" />
-    </div>
-    <div class="form-group">
-        <label helper-for="Population"/>
-        <input helper-for="Population" />
-    </div>
-    <div theme="primary">
-        <button type="submit">Add</button>
-        <button type="reset">Reset</button>
-        <a href="/Home/Index">Cancel</a>
-    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a class="btn btn-primary" href="/Home/Index">Cancel</a>
 </form>

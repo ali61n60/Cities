@@ -1,5 +1,4 @@
-﻿@using System.Collections.Generic
-@model System.Collections.Generic.IEnumerable<City>
+﻿@model IEnumerable<City>
 @{ Layout = "_Layout"; }
 <table class="table table-condensed table-bordered">
     <thead class="bg-primary">
@@ -12,7 +11,7 @@
     <tbody>
     @foreach (var city in Model) {
         <tr>
-            <td wrap="true">@city.Name</td>
+            <td>@city.Name</td>
             <td>@city.Country</td>
             <td class="text-right">@city.Population?.ToString("#,###")</td>
         </tr>
